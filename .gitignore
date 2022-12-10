@@ -12,9 +12,3 @@ web-build/
 
 # macOS
 .DS_Store
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/jsLinters/eslint.xml
-/.idea/.gitignore
-/.idea/frontend-challenge.iml
-/.idea/modules.xml
-/.idea/vcs.xml
