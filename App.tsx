@@ -1,26 +1,17 @@
-import React from 'react';
-import styled from 'styled-components/native';
-import {Provider} from 'react-redux';
-import {persistor, store} from './src/redux/store';
-import {PersistGate} from 'redux-persist/integration/react';
-import Challenge from './src';
+import type { FC } from "react";
+import { Provider } from "react-redux";
+import { persistor, store } from "~store";
+import { PersistGate } from "redux-persist/integration/react";
+import { MainNavigator } from "~navigators";
 
-export default function App() {
+const App: FC = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={null}>
-        <AppContainer>
-          <Challenge/>
-        </AppContainer>
+        <MainNavigator />
       </PersistGate>
     </Provider>
   );
-}
+};
 
-const AppContainer = styled.View`
-  flex: 1;
-  background-color: #ecf0f1;
-  align-items: center;
-  justify-content: center;
-`;
-
+export default App;
